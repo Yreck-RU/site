@@ -75,7 +75,7 @@ function ibg(){
 }
 ibg();
 function animait(){
-	let anims =document.querySelectorAll(".MyServices-flex-block");
+	let anims = $(".MyServices-flex-block");
 	for (var i = 0; i < anims.length; i++) {
 		const anim = anims[i];
 		anim.style.transitionDelay = `${i / 2}s`;
