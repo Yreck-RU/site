@@ -1,10 +1,28 @@
 //скрипт для адаптации изображений ==============================================================================================================
+let imageWebp = document.querySelector('.loading-screen-ditector');
+let imageWebpOk = false;
+if (imageWebp) {
+
+	if (imageWebp.width + imageWebp.height == 0) {
+		imageWebpOk = false;
+	} else {
+		imageWebpOk = true;
+	}
+}
 
 function ibg(){
 	let ibg=document.querySelectorAll(".ibg");
 	for (var i = 0; i < ibg.length; i++) {
-		if(ibg[i].querySelector('img')){
-			ibg[i].style.backgroundImage = 'url('+ibg[i].querySelector('img').getAttribute('src')+')';
+		if (ibg[i].querySelector('.webp') && ibg[i].querySelector('.jpg')) {
+			if(ibg[i].querySelector('.webp') && imageWebpOk == true){
+				ibg[i].style.backgroundImage = 'url('+ibg[i].querySelector('.webp').getAttribute('src')+')';
+			} else if(ibg[i].querySelector('.jpg') && imageWebpOk == false){
+				ibg[i].style.backgroundImage = 'url('+ibg[i].querySelector('.jpg').getAttribute('src')+')';
+			}
+		} else {
+			if(ibg[i].querySelector('img')){
+				ibg[i].style.backgroundImage = 'url('+ibg[i].querySelector('img').getAttribute('src')+')';
+			}
 		}
 	}
 }
@@ -21,6 +39,8 @@ if (iconMenu) {
 		menuBody.classList.toggle('_active');
 	});
 }
+
+
 
 //===============================================================================================================================================
 
@@ -97,7 +117,7 @@ if (heder) {
 	heder.classList.toggle('sticky', window.scrollY > 0);
 	window.addEventListener('scroll', function(){
 		heder.classList.toggle('sticky', window.scrollY > 0);
-		if (window.scrollY > window.innerHeight + 100) {
+		if (window.scrollY > window.innerHeight * 1.5) {
 			banner.classList.add('_sticky');
 		} else {
 			banner.classList.remove('_sticky');
@@ -143,7 +163,7 @@ const happy = document.querySelector('.Happy');
 
 if (happy) {
 	const happyBloks = document.querySelectorAll('.Happy-flex-block');
-	let happyNumber = 0;
+	let happyNumber = -0.2;
 	for (let i = 0; i < happyBloks.length; i++) {
 		let happyBlok = happyBloks[i];
 		happyNumber = happyNumber + 0.2;
@@ -487,6 +507,9 @@ for (let anchor of anchors) {
 				block: 'start'
 			})
 		}
+		document.body.classList.remove('_lock');
+		iconMenu.classList.remove('_active');
+		menuBody.classList.remove('_active');
 	})
 }
 
