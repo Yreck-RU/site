@@ -86,130 +86,117 @@ h1, h2, h3, h4, h5, h6 {
 body._lock {
   overflow: hidden !important; }
 
-.loading-screen {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 10001;
-  font-size: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.7);
-  -webkit-backdrop-filter: blur(9px);
-  backdrop-filter: blur(9px);
-  -webkit-transition: opacity 1.5s ease 0s;
-  -o-transition: opacity 1.5s ease 0s;
-  transition: opacity 1.5s ease 0s; }
-  .loading-screen span {
-    font-size: 2vw;
-    pointer-events: none;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    display: inline-block;
-    padding-right: 5px;
-    position: relative;
-    top: 0;
-    -webkit-transition: top 1.5s ease 0s;
-    -o-transition: top 1.5s ease 0s;
-    transition: top 1.5s ease 0s;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-name: loading-screen-anim;
-    animation-name: loading-screen-anim; }
-  .loading-screen span:last-child {
-    padding-right: 0; }
-  @media (max-width: 1064px) {
-    .loading-screen span {
-      font-size: 22px; } }
+/*.loading-screen {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10001;
 
-@-webkit-keyframes loading-screen-anim {
-  0% {
-    -webkit-transform: translateY(0%);
-    transform: translateY(0%); }
-  50% {
-    -webkit-transform: translateY(-10%);
-    transform: translateY(-10%); }
-  100% {
-    -webkit-transform: translateY(0%);
-    transform: translateY(0%); } }
+	font-size: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(255, 255, 255, 0.7);
+	backdrop-filter: blur(9px);
+	transition: opacity 1.5s ease 0s;
+
+	& span {
+		font-size: 2vw;
+		pointer-events: none;
+		animation-duration: 1s;
+		display: inline-block;
+		padding-right: 5px;
+		position: relative;
+		top: 0;
+		transition: top 1.5s ease 0s;
+
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+		animation-name: loading-screen-anim;
+	}
+	& span:last-child {
+		padding-right: 0;
+	}
+	@media (max-width: 1064px) {
+		& span {
+			font-size: 22px;
+		}
+	}
+}
+
+
 
 @keyframes loading-screen-anim {
   0% {
-    -webkit-transform: translateY(0%);
-    transform: translateY(0%); }
+    transform: translateY(0%);
+  }
   50% {
-    -webkit-transform: translateY(-10%);
-    transform: translateY(-10%); }
+  	transform: translateY(-10%);
+  }
   100% {
-    -webkit-transform: translateY(0%);
-    transform: translateY(0%); } }
+    transform: translateY(0%);
+    //transform: translateY(-10%);
+  }
+}
 
-body:before, body:after {
-  content: "";
-  display: block;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.9);
-  -webkit-backdrop-filter: blur(9px);
-  backdrop-filter: blur(9px);
-  z-index: 10000;
-  -webkit-transition: all 1s ease 0s;
-  -o-transition: all 1s ease 0s;
-  transition: all 1s ease 0s;
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden; }
+body {
+	//overflow: hidden;
+	&:before,
+	&:after {
+		content: "";
+		display: block;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(255, 255, 255, 0.9);
+		backdrop-filter: blur(9px);
+		z-index: 10000;
+		transition: all 1s ease 0s;
+		opacity: 0;
+		pointer-events: none;
+		visibility: hidden;
+	}
+	&:after {
+		opacity: 1;
+		pointer-events: auto;
+		visibility: visible;
+	}
+	&._Noloaded:after{
+		opacity: 0;
+		pointer-events: none;
+		visibility: hidden;
+	}
+	&._Noloaded{
+		overflow: hidden;
 
-body:after {
-  opacity: 1;
-  pointer-events: auto;
-  visibility: visible; }
+	}
+	&._Noloaded .Banner__bacgraund {
+		opacity: 0;
+	}
+	&._Noloaded:before {
+		opacity: 1;
+		pointer-events: auto;
+		visibility: visible;
+		transition: all 0s ease 0s;
+	}
 
-body._Noloaded:after {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden; }
-
-body._Noloaded {
-  overflow: hidden; }
-
-body._Noloaded .Banner__bacgraund {
-  opacity: 0; }
-
-body._Noloaded:before {
-  opacity: 1;
-  pointer-events: auto;
-  visibility: visible;
-  -webkit-transition: all 0s ease 0s;
-  -o-transition: all 0s ease 0s;
-  transition: all 0s ease 0s; }
-
-body._loaded:after {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden; }
-
-body._loaded .loading-screen {
-  opacity: 0;
-  pointer-events: none; }
-
-body._loaded .loading-screen span {
-  top: -2vw; }
-
+	&._loaded:after {
+		opacity: 0;
+		pointer-events: none;
+		visibility: hidden;
+	}
+	&._loaded .loading-screen {
+		opacity: 0;
+		pointer-events: none;
+	}
+	&._loaded .loading-screen span{
+		top: -2vw;
+	}
+}*/
 /*--------------------*/
 @font-face {
   font-family: 'fontello';
