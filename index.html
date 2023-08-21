@@ -27,7 +27,7 @@
 		<style>
 			@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");*{padding:0;margin:0;border:0}*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}:focus,:active{outline:none}a:focus,a:active{outline:none}nav,footer,header,aside{display:block}html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%}input,button,textarea{font-family:inherit}input::-ms-clear{display:none}button{cursor:pointer}button::-moz-focus-inner{padding:0;border:0}a,a:visited{text-decoration:none}a:hover{text-decoration:none}ul li{list-style:none}img{vertical-align:top}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}.ibg{background-position:center;background-size:cover;background-repeat:no-repeat;position:relative}.ibg img{width:0;height:0;position:absolute;top:0;left:0;opacity:0;visibility:hidden;content-visibility:auto}.loading-screen-ditector{position:fixed;left:0;top:0;z-index:-1000}body._lock{overflow:hidden!important}.loading-screen{position:fixed;left:0;top:0;width:100%;height:100%;z-index:10001;font-size:0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background:rgba(255,255,255,.7);-webkit-backdrop-filter:blur(9px);backdrop-filter:blur(9px);-webkit-transition:opacity 1.5s ease 0s;-o-transition:opacity 1.5s ease 0s;transition:opacity 1.5s ease 0s}.loading-screen span{font-size:2vw;pointer-events:none;-webkit-animation-duration:1s;animation-duration:1s;display:inline-block;padding-right:5px;position:relative;top:0;-webkit-transition:top 1.5s ease 0s;-o-transition:top 1.5s ease 0s;transition:top 1.5s ease 0s;-webkit-animation-timing-function:linear;animation-timing-function:linear;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-name:loading-screen-anim;animation-name:loading-screen-anim}.loading-screen span:last-child{padding-right:0}@media (max-width:1064px){.loading-screen span{font-size:22px}}@-webkit-keyframes loading-screen-anim{0%{-webkit-transform:translateY(0%);transform:translateY(0%)}50%{-webkit-transform:translateY(-10%);transform:translateY(-10%)}100%{-webkit-transform:translateY(0%);transform:translateY(0%)}}@keyframes loading-screen-anim{0%{-webkit-transform:translateY(0%);transform:translateY(0%)}50%{-webkit-transform:translateY(-10%);transform:translateY(-10%)}100%{-webkit-transform:translateY(0%);transform:translateY(0%)}}body:before,body:after{content:"";display:block;position:fixed;left:0;top:0;width:100%;height:100%;background:rgba(255,255,255,.9);-webkit-backdrop-filter:blur(9px);backdrop-filter:blur(9px);z-index:10000;-webkit-transition:all 1s ease 0s;-o-transition:all 1s ease 0s;transition:all 1s ease 0s;opacity:0;pointer-events:none;visibility:hidden}body:after{opacity:1;pointer-events:auto;visibility:visible}body._Noloaded:after{opacity:0;pointer-events:none;visibility:hidden}body._Noloaded{overflow:hidden}body._Noloaded .Banner__bacgraund{opacity:0}body._Noloaded:before{opacity:1;pointer-events:auto;visibility:visible;-webkit-transition:all 0s ease 0s;-o-transition:all 0s ease 0s;transition:all 0s ease 0s}body._loaded:after{opacity:0;pointer-events:none;visibility:hidden}body._loaded .loading-screen{opacity:0;pointer-events:none}body._loaded .loading-screen span{top:-2vw}@font-face{font-family:'fontello';src:url("font/fontello.eot?40965941");src:url("font/fontello.eot?40965941#iefix") format("embedded-opentype"),url("font/fontello.woff2?40965941") format("woff2"),url("font/fontello.woff?40965941") format("woff"),url("font/fontello.ttf?40965941") format("truetype"),url("font/fontello.svg?40965941#fontello") format("svg");font-weight:400;font-style:normal}[class^="icon-"]:before,[class*=" icon-"]:before{font-family:"fontello";font-style:normal;font-weight:400;speak:never;display:inline-block;text-decoration:inherit;width:1em;margin-right:.2em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;margin-left:.2em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.icon-github:before{content:'\e800'}.icon-network:before{content:'\e801'}.icon-facebook:before{content:'\f052'}.icon-gplus:before{content:'\f0d5'}.icon-youtube-play:before{content:'\f16a'}.icon-tumblr:before{content:'\f173'}.icon-twitter-1:before{content:'\f302'}.icon-twitter:before{content:'\f309'}
 		</style>
-		<link rel="stylesheet" type="text/css" href="css/style-min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 	</head>
 	<!-- Отображаемое тело страницы -->
 	<body>
@@ -71,7 +71,7 @@
 					<div class="container">
 						<div class="heder-flex">
 							<div class="heder-flex--left">
-								<a href="#" class="logo">
+								<a href="#" aria-label="link" class="logo">
 									<img src="img/heder/Logo.png" alt="" class="logo__content">
 									<img src="img/heder/Logo-hover.png" alt="" class="logo__hover">
 								</a>
@@ -81,32 +81,32 @@
 									<div class="nav">
 										<ul class="list menu__body">
 											<li class="link">
-												<a href="#Home" class="_link-click" onclick="return false">
+												<a href="#Home" aria-label="Home" class="_link-click" onclick="return false">
 													Home
 												</a>
 											</li>
 											<li class="link">
-												<a href="#About" class="_link-click" onclick="return false">
+												<a href="#About" aria-label="About" class="_link-click" onclick="return false">
 													About
 												</a>
 											</li>
 											<li class="link">
-												<a href="#Services" class="_link-click" onclick="return false">
+												<a href="#Services" aria-label="Services" class="_link-click" onclick="return false">
 													Services
 												</a>
 											</li>
 											<li class="link">
-												<a href="#Portfolio" class="_link-click" onclick="return false">
+												<a href="#Portfolio" aria-label="Portfolio" class="_link-click" onclick="return false">
 													Portfolio
 												</a>
 											</li>
 											<li class="link">
-												<a href="#Testimonial" class="_link-click" onclick="return false">
+												<a href="#Testimonial" aria-label="Testimonials" class="_link-click" onclick="return false">
 													Testimonials
 												</a>
 											</li>
 											<li class="link">
-												<a href="#Contact" class="_link-click" onclick="return false">
+												<a href="#Contact" aria-label="Contact" class="_link-click" onclick="return false">
 													Contact
 												</a>
 											</li>
@@ -143,7 +143,7 @@
 								</div>
 							</div>
 							<div class="Banner-scrol">
-								<a href="#About" class="_link-click" onclick="return false">
+								<a href="#About" aria-label="link" class="_link-click" onclick="return false">
 									<img src="img/Bloakc_1/3.png" alt="" class="Banner-scrol__img-content">
 									<img src="img/Bloakc_1/2.png" alt="" class="Banner-scrol__img-hover">
 								</a>
@@ -333,7 +333,7 @@
 							<div class="MyPortfolio-flex-block">
 								<div class="MyPortfolio-flex-block-top ibg">
 									<!--<a href="#"></a>-->
-									<a href="popup-portfolio" class="popup-link"></a>
+									<a href="popup-portfolio" aria-label="link" class="popup-link"></a>
 									<!--<img src="img/Bloakc_4/1.webp" alt="" class="webp" loading="lazy" decoding="async">
 									<img src="img/Bloakc_4/1.jpg" alt="" class="jpg" loading="lazy" decoding="async">-->
 									<span data-ibg="img/Bloakc_4/1.webp" class="_span-img _webp"></span>
@@ -365,7 +365,7 @@
 									</div>
 								</div>
 								<div class="MyPortfolio-flex-block-bottom ibg">
-									<a href="popup-portfolio" class="popup-link"></a>
+									<a href="popup-portfolio" aria-label="link" class="popup-link"></a>
 									<!--<img src="img/Bloakc_4/4.webp" alt="" class="webp" loading="lazy" decoding="async">
 									<img src="img/Bloakc_4/4.jpg" alt="" class="jpg" loading="lazy" decoding="async">-->
 									<span data-ibg="img/Bloakc_4/4.webp" class="_span-img _webp"></span>
@@ -394,7 +394,7 @@
 							</div>
 							<div class="MyPortfolio-flex-block">
 								<div class="MyPortfolio-flex-block-bottom ibg">
-									<a href="popup-portfolio" class="popup-link"></a>
+									<a href="popup-portfolio" aria-label="link" class="popup-link"></a>
 									<!--<img src="img/Bloakc_4/2.webp" alt="" class="webp" loading="lazy" decoding="async">
 									<img src="img/Bloakc_4/2.jpg" alt="" class="jpg" loading="lazy" decoding="async">-->
 									<span data-ibg="img/Bloakc_4/2.webp" class="_span-img _webp"></span>
@@ -421,7 +421,7 @@
 									</div>
 								</div>
 								<div class="MyPortfolio-flex-block-top ibg">
-									<a href="popup-portfolio" class="popup-link"></a>
+									<a href="popup-portfolio" aria-label="link" class="popup-link"></a>
 									<!--<img src="img/Bloakc_4/5.webp" alt="" class="webp" loading="lazy" decoding="async">
 									<img src="img/Bloakc_4/5.jpg" alt="" class="jpg" loading="lazy" decoding="async">-->
 									<span data-ibg="img/Bloakc_4/5.webp" class="_span-img _webp"></span>
@@ -455,7 +455,7 @@
 							</div>
 							<div class="MyPortfolio-flex-block">
 								<div class="MyPortfolio-flex-block-top ibg">
-									<a href="popup-portfolio" class="popup-link"></a>
+									<a href="popup-portfolio" aria-label="link" class="popup-link"></a>
 									<!--<img src="img/Bloakc_4/3.webp" alt="" class="webp" loading="lazy" decoding="async">
 									<img src="img/Bloakc_4/3.jpg" alt="" class="jpg" loading="lazy" decoding="async">-->
 									<span data-ibg="img/Bloakc_4/3.webp" class="_span-img _webp"></span>
@@ -487,7 +487,7 @@
 									</div>
 								</div>
 								<div class="MyPortfolio-flex-block-bottom ibg">
-									<a href="popup-portfolio" class="popup-link"></a>
+									<a href="popup-portfolio" aria-label="link" class="popup-link"></a>
 									<!--<img src="img/Bloakc_4/6.webp" alt="" class="webp" loading="lazy" decoding="async">
 									<img src="img/Bloakc_4/6.jpg" alt="" class="jpg" loading="lazy" decoding="async">-->
 									<span data-ibg="img/Bloakc_4/6.webp" class="_span-img _webp"></span>
@@ -528,7 +528,7 @@
 							<h2>
 								Available For Freelance Work!
 							</h2>
-							<a href="#" class="Available-flex-button">
+							<a href="#" aria-label="Hire Me" class="Available-flex-button">
 								Hire Me
 							</a>
 						</div>
@@ -685,25 +685,25 @@
 								</p>
 							</div>
 							<div class="foter-blok2">
-								<a href="#" class="foter-link">
+								<a href="#" aria-label="link" class="foter-link">
 									<span class="icon-facebook icon"></span>
 								</a>
-								<a href="#" class="foter-link">
+								<a href="#" aria-label="link" class="foter-link">
 									<span class="icon-twitter icon"></span>
 								</a>
-								<a href="#" class="foter-link">
+								<a href="#" aria-label="link" class="foter-link">
 									<span class="icon-youtube-play icon"></span>
 								</a>
-								<a href="#" class="foter-link">
+								<a href="#" aria-label="link" class="foter-link">
 									<span class="icon-github icon"></span>
 								</a>
-								<a href="#" class="foter-link">
+								<a href="#" aria-label="link" class="foter-link">
 									<span class="icon-network icon"></span>
 								</a>
-								<a href="#" class="foter-link">
+								<a href="#" aria-label="link" class="foter-link">
 									<span class="icon-gplus icon"></span>
 								</a>
-								<a href="#" class="foter-link">
+								<a href="#" aria-label="link" class="foter-link">
 									<span class="icon-tumblr icon"></span>
 								</a>
 							</div>
@@ -756,25 +756,25 @@
 									Beatae perspiciatis architecto, saepe aliquid, nesciunt, qui voluptate praesentium ullam blanditiis deleniti vel atque ratione sequi harum nisi! Maxime ipsa repellendus minus harum fugit non possimus officia nulla sunt quo.</p>
 								</div>
 								<div class="MyPortfolio-popup-block__social-media">
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-facebook icon"></span>
 									</a>
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-twitter icon"></span>
 									</a>
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-youtube-play icon"></span>
 									</a>
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-github icon"></span>
 									</a>
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-network icon"></span>
 									</a>
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-gplus icon"></span>
 									</a>
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-tumblr icon"></span>
 									</a>
 								</div>
@@ -810,25 +810,25 @@
 									Beatae perspiciatis architecto, saepe aliquid, nesciunt, qui voluptate praesentium ullam blanditiis deleniti vel atque ratione sequi harum nisi! Maxime ipsa repellendus minus harum fugit non possimus officia nulla sunt quo.</p>
 								</div>
 								<div class="MyPortfolio-popup-block__social-media">
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-facebook icon"></span>
 									</a>
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-twitter icon"></span>
 									</a>
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-youtube-play icon"></span>
 									</a>
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-github icon"></span>
 									</a>
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-network icon"></span>
 									</a>
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-gplus icon"></span>
 									</a>
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-tumblr icon"></span>
 									</a>
 								</div>
@@ -864,25 +864,25 @@
 									Beatae perspiciatis architecto, saepe aliquid, nesciunt, qui voluptate praesentium ullam blanditiis deleniti vel atque ratione sequi harum nisi! Maxime ipsa repellendus minus harum fugit non possimus officia nulla sunt quo.</p>
 								</div>
 								<div class="MyPortfolio-popup-block__social-media">
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-facebook icon"></span>
 									</a>
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-twitter icon"></span>
 									</a>
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-youtube-play icon"></span>
 									</a>
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-github icon"></span>
 									</a>
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-network icon"></span>
 									</a>
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-gplus icon"></span>
 									</a>
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-tumblr icon"></span>
 									</a>
 								</div>
@@ -918,25 +918,25 @@
 									Beatae perspiciatis architecto, saepe aliquid, nesciunt, qui voluptate praesentium ullam blanditiis deleniti vel atque ratione sequi harum nisi! Maxime ipsa repellendus minus harum fugit non possimus officia nulla sunt quo.</p>
 								</div>
 								<div class="MyPortfolio-popup-block__social-media">
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-facebook icon"></span>
 									</a>
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-twitter icon"></span>
 									</a>
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-youtube-play icon"></span>
 									</a>
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-github icon"></span>
 									</a>
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-network icon"></span>
 									</a>
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-gplus icon"></span>
 									</a>
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-tumblr icon"></span>
 									</a>
 								</div>
@@ -972,25 +972,25 @@
 									Beatae perspiciatis architecto, saepe aliquid, nesciunt, qui voluptate praesentium ullam blanditiis deleniti vel atque ratione sequi harum nisi! Maxime ipsa repellendus minus harum fugit non possimus officia nulla sunt quo.</p>
 								</div>
 								<div class="MyPortfolio-popup-block__social-media">
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-facebook icon"></span>
 									</a>
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-twitter icon"></span>
 									</a>
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-youtube-play icon"></span>
 									</a>
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-github icon"></span>
 									</a>
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-network icon"></span>
 									</a>
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-gplus icon"></span>
 									</a>
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-tumblr icon"></span>
 									</a>
 								</div>
@@ -1026,25 +1026,25 @@
 									Beatae perspiciatis architecto, saepe aliquid, nesciunt, qui voluptate praesentium ullam blanditiis deleniti vel atque ratione sequi harum nisi! Maxime ipsa repellendus minus harum fugit non possimus officia nulla sunt quo.</p>
 								</div>
 								<div class="MyPortfolio-popup-block__social-media">
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-facebook icon"></span>
 									</a>
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-twitter icon"></span>
 									</a>
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-youtube-play icon"></span>
 									</a>
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-github icon"></span>
 									</a>
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-network icon"></span>
 									</a>
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-gplus icon"></span>
 									</a>
-									<a href="#" class="MyPortfolio-popup-block__link">
+									<a href="#" aria-label="link" class="MyPortfolio-popup-block__link">
 										<span class="icon-tumblr icon"></span>
 									</a>
 								</div>
